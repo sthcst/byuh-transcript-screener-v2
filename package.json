@@ -1,0 +1,56 @@
+{
+  "name": "byuh-transcript-screener",
+  "version": "1.0.0",
+  "description": "BYUH Global Transcript Screener - AI-assisted transcript evaluation with FERPA compliance",
+  "private": true,
+  "homepage": "./",
+  "main": "public/electron.js",
+  "type": "module",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.1.0",
+    "pdf-parse": "^1.1.1",
+    "tesseract.js": "^4.1.1",
+    "canvas": "^2.11.2",
+    "crypto-js": "^4.1.1",
+    "dexie": "^3.2.4"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/user-event": "^13.5.0",
+    "jest": "^27.5.1",
+    "supertest": "^6.3.3",
+    "electron": "^26.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "eject": "react-scripts eject",
+    "electron": "electron public/main.js",
+    "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && npm run electron\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
